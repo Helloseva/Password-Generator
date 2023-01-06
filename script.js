@@ -1,4 +1,26 @@
-// Array of special characters to be included in password
+
+
+// Function to prompt user for password options //
+function getPasswordOptions() {
+
+}
+
+// Function for getting a random element from an array //
+function getRandom(arr) {
+
+}
+
+// Function to generate password with user input //
+function generatePassword() {
+
+// variables for prompts //
+var passLength = prompt("Your password needs to be between 10 and 64.");
+var upperCase = confirm("Click OK to confirm including uppercase charecters");
+var lowerCase = confirm("Click OK to confirm including lowercase charecters");
+var numbers  = confirm("Click OK to confirm including numeric characters");
+var specialCh = confirm("Click OK to confirm including special characters");
+
+// Array of possible characters to be included in password //
 var specialCharacters = [
   '@',
   '%',
@@ -25,10 +47,8 @@ var specialCharacters = [
   '.'
 ];
 
-// Array of numeric characters to be included in password
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-// Array of lowercase characters to be included in password
 var lowerCasedCharacters = [
   'a',
   'b',
@@ -58,7 +78,6 @@ var lowerCasedCharacters = [
   'z'
 ];
 
-// Array of uppercase characters to be included in password
 var upperCasedCharacters = [
   'A',
   'B',
@@ -87,19 +106,6 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
-
-// Function to prompt user for password options
-function getPasswordOptions() {
-
-}
-
-// Function for getting a random element from an array
-function getRandom(arr) {
-
-}
-
-// Function to generate password with user input
-function generatePassword() {
 
 }
 
