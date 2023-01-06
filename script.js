@@ -14,13 +14,14 @@ function getRandom(arr) {
 function generatePassword() {
 
 // variables for prompts //
-var passLength = prompt("Your password needs to be between 10 and 64.");
+var passLength = prompt("The length of the password needs to be at least 10 characters but no more than 64.");
 var upperCase = confirm("Click OK to confirm including uppercase charecters");
 var lowerCase = confirm("Click OK to confirm including lowercase charecters");
 var numbers  = confirm("Click OK to confirm including numeric characters");
 var specialCh = confirm("Click OK to confirm including special characters");
 
 // Array of possible characters to be included in password //
+var password = "";
 var specialCharacters = [
   '@',
   '%',
@@ -107,7 +108,39 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+var allCharacters = [];
+
+// if statements to combine arrays //
+if (upperCase === true) {
+  allCharacters.push.apply (allCharacters, upperCasedCharacters);
 }
+
+if (lowerCase === true) {
+  allCharacters.push.apply(allCharacters, lowerCasedCharacters);
+}
+
+if (numbers = true) {
+  allCharacters.push.apply(allCharacters, numericCharacters);
+}
+
+if (specialCh === true) {
+  allCharacters.push.apply(allCharacters, specialCharacters);
+}
+
+// makes password random and the exact length selected by the user //
+for (var i=0; i<passLength; i++) {
+  var random =Math.floor(Math.random() * allCharacters.length);
+  password = password + allCharacters[random];
+}
+
+return password;
+}
+
+
+
+
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
