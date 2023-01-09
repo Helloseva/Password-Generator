@@ -1,5 +1,3 @@
-
-
 // Function to prompt user for password options //
 function getPasswordOptions() {
 
@@ -14,7 +12,7 @@ function getRandom(arr) {
 function generatePassword() {
 
 // variables for prompts //
-var passLength = prompt("The length of the password needs to be at least 10 characters but no more than 64.");
+var passwordLength = prompt("Please enter your length of the password,from 10 characters to 64 characters.");
 var upperCase = confirm("Click OK to confirm including uppercase charecters");
 var lowerCase = confirm("Click OK to confirm including lowercase charecters");
 var numbers  = confirm("Click OK to confirm including numeric characters");
@@ -22,6 +20,7 @@ var specialCh = confirm("Click OK to confirm including special characters");
 
 // Array of possible characters to be included in password //
 var password = "";
+
 var specialCharacters = [
   '@',
   '%',
@@ -128,18 +127,13 @@ if (specialCh === true) {
 }
 
 // makes password random and the exact length selected by the user //
-for (var i=0; i<passLength; i++) {
-  var random =Math.floor(Math.random() * allCharacters.length);
+for (var i=0; i<passwordLength; i++) {
+  var random = Math.floor(Math.random() * allCharacters.length);
   password = password + allCharacters[random];
 }
 
 return password;
 }
-
-
-
-
-
 
 
 // Get references to the #generate element
