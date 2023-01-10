@@ -1,13 +1,3 @@
-// Function to prompt user for password options //
-function getPasswordOptions() {
-
-}
-
-// Function for getting a random element from an array //
-function getRandom(arr) {
-
-}
-
 // Function to generate password with user input //
 function generatePassword() {
 
@@ -131,7 +121,7 @@ for (var i=0; i<passwordLength; i++) {
   var random = Math.floor(Math.random() * allCharacters.length);
   password = password + allCharacters[random];
 }
-
+// console.log(generated Password)
 return password;
 }
 
